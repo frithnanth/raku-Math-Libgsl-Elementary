@@ -1,7 +1,5 @@
 [![Build Status](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Elementary.svg?branch=master)](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Elementary)
 
-[![Build Status](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Elementary.svg?branch=master)](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Elementary)
-
 NAME
 ====
 
