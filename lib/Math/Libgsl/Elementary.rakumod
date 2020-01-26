@@ -30,8 +30,6 @@ sub fcmp(Num(Cool) $x, Num(Cool) $y, Num(Cool) $ε --> Bool) is export(:approx) 
 
 =begin pod
 
-[![Build Status](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Elementary.svg?branch=master)](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Elementary)
-
 =head1 NAME
 
 Math::Libgsl::Elementary - An interface to libgsl, the Gnu Scientific Library - elementary functions.
@@ -159,9 +157,9 @@ That command will install libgslcblas0 as well, since it's used by the GSL.
 libgsl23 and libgslcblas0 have a missing symbol on Ubuntu 18.04.
 I solved the issue installing the Debian Buster version of those three libraries:
 
-L<http://http.us.debian.org/debian/pool/main/g/gsl/libgslcblas0_2.5+dfsg-6_amd64.deb>
-L<http://http.us.debian.org/debian/pool/main/g/gsl/libgsl23_2.5+dfsg-6_amd64.deb>
-L<http://http.us.debian.org/debian/pool/main/g/gsl/libgsl-dev_2.5+dfsg-6_amd64.deb>
+=item L<http://http.us.debian.org/debian/pool/main/g/gsl/libgslcblas0_2.5+dfsg-6_amd64.deb>
+=item L<http://http.us.debian.org/debian/pool/main/g/gsl/libgsl23_2.5+dfsg-6_amd64.deb>
+=item L<http://http.us.debian.org/debian/pool/main/g/gsl/libgsl-dev_2.5+dfsg-6_amd64.deb>
 
 =head1 Installation
 
