@@ -14,7 +14,7 @@
     "Math::Libgsl::Raw::Elementary" : "lib/Math/Libgsl/Raw/Elementary.rakumod"
   },
   "resources" : [ ],
-  "source-url" : "git://github.com/frithnanth/perl6-Math-Libgsl-Elementary.git",
+  "source-url" : "git://github.com/frithnanth/raku-Math-Libgsl-Elementary.git",
   "tags" : [
     "math",
     "nativecall"
