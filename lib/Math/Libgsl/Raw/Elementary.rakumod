@@ -5,7 +5,15 @@ unit module Math::Libgsl::Raw::Elementary:ver<0.0.2>:auth<cpan:FRITH>;
 use NativeCall;
 
 sub LIB {
-  run('/sbin/ldconfig', '-p', :chomp, :out).out.slurp(:close).split("\n").grep(/^ \s+ libgsl\.so\. \d+ /).sort.head.comb(/\S+/).head;
+  run('/sbin/ldconfig', '-p', :chomp, :out)
+    .out
+    .slurp(:close)
+    .split("\n")
+    .grep(/^ \s+ libgsl\.so\. \d+ /)
+    .sort
+    .head
+    .comb(/\S+/)
+    .head;
 }
 
 # Test functions

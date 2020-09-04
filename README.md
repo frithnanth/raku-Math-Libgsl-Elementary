@@ -25,87 +25,69 @@ Math::Libgsl::Elementary makes these tags available:
 
   * :smallint
 
-  * :approx
-
-### sub log1p(Num(Cool) $x --> Num) is export(:elem)
+### sub log1p(Num() $x --> Num) is export(:elem)
 
 Computes the value of log(1 + x).
 
-### sub expm1(Num(Cool) $x --> Num) is export(:elem)
+### sub expm1(Num() $x --> Num) is export(:elem)
 
 Computes the value of exp(x) - 1.
 
-### sub hypot(Num(Cool) $x, Num(Cool) $y --> Num) is export(:elem)
+### sub hypot(Num() $x, Num() $y --> Num) is export(:elem)
 
 Computes the value of sqrt(x² + y²).
 
-### sub hypot3(Num(Cool) $x, Num(Cool) $y, Num(Cool) $z --> Num) is export(:elem)
+### sub hypot3(Num() $x, Num() $y, Num() $z --> Num) is export(:elem)
 
 Computes the value of sqrt(x² + y² + z²).
 
-### sub asinh(Num(Cool) $x --> Num) is export(:elem)
-
-Computes the value of arcsinh(x).
-
-### sub acosh(Num(Cool) $x --> Num) is export(:elem)
-
-Computes the value of arccosh(x).
-
-### sub atanh(Num(Cool) $x --> Num) is export(:elem)
-
-Computes the value of arctanh(x).
-
-### sub ldexp(Num(Cool) $x, Int $e --> Num) is export(:elem)
+### sub ldexp(Num() $x, Int $e --> Num) is export(:elem)
 
 Computes the value of x * 2ᵉ.
 
-### sub frexp(Num(Cool) $x --> List) is export(:elem)
+### sub frexp(Num() $x --> List) is export(:elem)
 
 Computes the value of f such that x = f * 2ᵉ. It returns a list of two values: f and e.
 
-### sub int-pow(Num(Cool) $x, Int $e --> Num) is export(:smallint)
+### sub int-pow(Num() $x, Int $e --> Num) is export(:smallint)
 
 Computes the value of xᵉ with e ∈ ℤ.
 
-### sub uint-pow(Num(Cool) $x, UInt $e --> Num) is export(:smallint)
+### sub uint-pow(Num() $x, UInt $e --> Num) is export(:smallint)
 
 Computes the value of xᵉ with e ∈ ℕ.
 
-### sub pow2(Num(Cool) $x --> Num) is export(:smallint)
+### sub pow2(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x².
 
-### sub pow3(Num(Cool) $x --> Num) is export(:smallint)
+### sub pow3(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x³.
 
-### sub pow4(Num(Cool) $x --> Num) is export(:smallint)
+### sub pow4(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x⁴.
 
-### sub pow5(Num(Cool) $x --> Num) is export(:smallint)
+### sub pow5(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x⁵.
 
-### sub pow6(Num(Cool) $x --> Num) is export(:smallint)
+### sub pow6(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x⁶.
 
-### sub pow7(Num(Cool) $x --> Num) is export(:smallint)
+### sub pow7(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x⁷.
 
-### sub pow8(Num(Cool) $x --> Num) is export(:smallint)
+### sub pow8(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x⁸.
 
-### sub pow9(Num(Cool) $x --> Num) is export(:smallint)
+### sub pow9(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x⁹.
-
-### sub fcmp(Num(Cool) $x, Num(Cool) $y, Num(Cool) $ε --> Bool) is export(:approx)
-
-Determines whether x and y are approximately equal to a relative accuracy ε.
 
 C Library Documentation
 =======================
@@ -118,7 +100,7 @@ Prerequisites
 This module requires the libgsl library to be installed. Please follow the instructions below based on your platform:
 
 Debian Linux and Ubuntu 20.04
-------------
+-----------------------------
 
     sudo apt install libgsl23 libgsl-dev libgslcblas0
 

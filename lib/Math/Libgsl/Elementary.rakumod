@@ -5,28 +5,23 @@ unit module Math::Libgsl::Elementary:ver<0.0.2>:auth<cpan:FRITH>;
 use Math::Libgsl::Raw::Elementary :ALL;
 
 # Elementary functions
-sub log1p(Num(Cool) $x --> Num) is export(:elem) { gsl_log1p($x) }
-sub expm1(Num(Cool) $x --> Num) is export(:elem) { gsl_expm1($x) }
-sub hypot(Num(Cool) $x, Num(Cool) $y --> Num) is export(:elem) { gsl_hypot($x, $y) }
-sub hypot3(Num(Cool) $x, Num(Cool) $y, Num(Cool) $z --> Num) is export(:elem) { gsl_hypot3($x, $y, $z) }
-sub asinh(Num(Cool) $x --> Num) is export(:elem) { gsl_asinh($x) }
-sub acosh(Num(Cool) $x --> Num) is export(:elem) { gsl_acosh($x) }
-sub atanh(Num(Cool) $x --> Num) is export(:elem) { gsl_atanh($x) }
-sub ldexp(Num(Cool) $x, Int $e --> Num) is export(:elem) { gsl_ldexp($x, $e) }
-sub frexp(Num(Cool) $x --> List) is export(:elem) { my int32 $e = 0; my $f = gsl_frexp($x, $e); $f, $e }
+sub log1p(Num() $x --> Num) is export(:elem) { gsl_log1p($x) }
+sub expm1(Num() $x --> Num) is export(:elem) { gsl_expm1($x) }
+sub hypot(Num() $x, Num() $y --> Num) is export(:elem) { gsl_hypot($x, $y) }
+sub hypot3(Num() $x, Num() $y, Num() $z --> Num) is export(:elem) { gsl_hypot3($x, $y, $z) }
+sub ldexp(Num() $x, Int $e --> Num) is export(:elem) { gsl_ldexp($x, $e) }
+sub frexp(Num() $x --> List) is export(:elem) { my int32 $e = 0; my $f = gsl_frexp($x, $e); $f, $e }
 # Small integer powers
-sub int-pow(Num(Cool) $x, Int $e --> Num) is export(:smallint) { gsl_pow_int($x, $e) }
-sub uint-pow(Num(Cool) $x, UInt $e --> Num) is export(:smallint) { gsl_pow_uint($x, $e) }
-sub pow2(Num(Cool) $x --> Num) is export(:smallint) { gsl_pow_2($x) }
-sub pow3(Num(Cool) $x --> Num) is export(:smallint) { gsl_pow_3($x) }
-sub pow4(Num(Cool) $x --> Num) is export(:smallint) { gsl_pow_4($x) }
-sub pow5(Num(Cool) $x --> Num) is export(:smallint) { gsl_pow_5($x) }
-sub pow6(Num(Cool) $x --> Num) is export(:smallint) { gsl_pow_6($x) }
-sub pow7(Num(Cool) $x --> Num) is export(:smallint) { gsl_pow_7($x) }
-sub pow8(Num(Cool) $x --> Num) is export(:smallint) { gsl_pow_8($x) }
-sub pow9(Num(Cool) $x --> Num) is export(:smallint) { gsl_pow_9($x) }
-# Approximate Comparison of Floating Point Numbers
-sub fcmp(Num(Cool) $x, Num(Cool) $y, Num(Cool) $ε --> Bool) is export(:approx) { gsl_fcmp($x, $y, $ε) == 0 ?? True !! False }
+sub int-pow(Num() $x, Int $e --> Num) is export(:smallint) { gsl_pow_int($x, $e) }
+sub uint-pow(Num() $x, UInt $e --> Num) is export(:smallint) { gsl_pow_uint($x, $e) }
+sub pow2(Num() $x --> Num) is export(:smallint) { gsl_pow_2($x) }
+sub pow3(Num() $x --> Num) is export(:smallint) { gsl_pow_3($x) }
+sub pow4(Num() $x --> Num) is export(:smallint) { gsl_pow_4($x) }
+sub pow5(Num() $x --> Num) is export(:smallint) { gsl_pow_5($x) }
+sub pow6(Num() $x --> Num) is export(:smallint) { gsl_pow_6($x) }
+sub pow7(Num() $x --> Num) is export(:smallint) { gsl_pow_7($x) }
+sub pow8(Num() $x --> Num) is export(:smallint) { gsl_pow_8($x) }
+sub pow9(Num() $x --> Num) is export(:smallint) { gsl_pow_9($x) }
 
 =begin pod
 
@@ -52,88 +47,71 @@ Math::Libgsl::Elementary makes these tags available:
 
 =item :elem
 =item :smallint
-=item :approx
 
-=head3 sub log1p(Num(Cool) $x --> Num) is export(:elem)
+=head3 sub log1p(Num() $x --> Num) is export(:elem)
 
 Computes the value of log(1 + x).
 
-=head3 sub expm1(Num(Cool) $x --> Num) is export(:elem)
+=head3 sub expm1(Num() $x --> Num) is export(:elem)
 
 Computes the value of exp(x) - 1.
 
-=head3 sub hypot(Num(Cool) $x, Num(Cool) $y --> Num) is export(:elem)
+=head3 sub hypot(Num() $x, Num() $y --> Num) is export(:elem)
 
 Computes the value of sqrt(x² + y²).
 
-=head3 sub hypot3(Num(Cool) $x, Num(Cool) $y, Num(Cool) $z --> Num) is export(:elem)
+=head3 sub hypot3(Num() $x, Num() $y, Num() $z --> Num) is export(:elem)
 
 Computes the value of sqrt(x² + y² + z²).
 
-=head3 sub asinh(Num(Cool) $x --> Num) is export(:elem)
-
-Computes the value of arcsinh(x).
-
-=head3 sub acosh(Num(Cool) $x --> Num) is export(:elem)
-
-Computes the value of arccosh(x).
-
-=head3 sub atanh(Num(Cool) $x --> Num) is export(:elem)
-
-Computes the value of arctanh(x).
-
-=head3 sub ldexp(Num(Cool) $x, Int $e --> Num) is export(:elem)
+=head3 sub ldexp(Num() $x, Int $e --> Num) is export(:elem)
 
 Computes the value of x * 2ᵉ.
 
-=head3 sub frexp(Num(Cool) $x --> List) is export(:elem)
+=head3 sub frexp(Num() $x --> List) is export(:elem)
 
 Computes the value of f such that x = f * 2ᵉ.
 It returns a list of two values: f and e.
 
-=head3 sub int-pow(Num(Cool) $x, Int $e --> Num) is export(:smallint)
+=head3 sub int-pow(Num() $x, Int $e --> Num) is export(:smallint)
 
 Computes the value of xᵉ with e ∈ ℤ.
 
-=head3 sub uint-pow(Num(Cool) $x, UInt $e --> Num) is export(:smallint)
+=head3 sub uint-pow(Num() $x, UInt $e --> Num) is export(:smallint)
 
 Computes the value of xᵉ with e ∈ ℕ.
 
-=head3 sub pow2(Num(Cool) $x --> Num) is export(:smallint)
+=head3 sub pow2(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x².
 
-=head3 sub pow3(Num(Cool) $x --> Num) is export(:smallint)
+=head3 sub pow3(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x³.
 
-=head3 sub pow4(Num(Cool) $x --> Num) is export(:smallint)
+=head3 sub pow4(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x⁴.
 
-=head3 sub pow5(Num(Cool) $x --> Num) is export(:smallint)
+=head3 sub pow5(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x⁵.
 
-=head3 sub pow6(Num(Cool) $x --> Num) is export(:smallint)
+=head3 sub pow6(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x⁶.
 
-=head3 sub pow7(Num(Cool) $x --> Num) is export(:smallint)
+=head3 sub pow7(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x⁷.
 
-=head3 sub pow8(Num(Cool) $x --> Num) is export(:smallint)
+=head3 sub pow8(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x⁸.
 
-=head3 sub pow9(Num(Cool) $x --> Num) is export(:smallint)
+=head3 sub pow9(Num() $x --> Num) is export(:smallint)
 
 Computes the value of x⁹.
-
-=head3 sub fcmp(Num(Cool) $x, Num(Cool) $y, Num(Cool) $ε --> Bool) is export(:approx)
-
-Determines whether x and y are approximately equal to a relative accuracy ε.
 
 =head1 C Library Documentation
 

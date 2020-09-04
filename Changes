@@ -1,6 +1,7 @@
 Revision history for Math-Libgsl-Elementary
 
 {{$NEXT}}
+    - Discard functions already present in Raku
 
 0.0.2  2020-02-17T18:52:46+01:00
     - Fix typo in META6.json
