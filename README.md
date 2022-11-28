@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Elementary.svg?branch=master)](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Elementary)
+[![Actions Status](https://github.com/frithnanth/raku-Math-Libgsl-Elementary/workflows/test/badge.svg)](https://github.com/frithnanth/raku-Math-Libgsl-Elementary/actions)
 
 NAME
 ====
@@ -8,7 +8,7 @@ Math::Libgsl::Elementary - An interface to libgsl, the Gnu Scientific Library - 
 SYNOPSIS
 ========
 
-```perl6
+```raku
 use Math::Libgsl::Elementary :ALL;
 ```
 

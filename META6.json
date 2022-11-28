@@ -1,24 +1,28 @@
 {
-  "auth" : "cpan:FRITH",
-  "authors" : [
+  "auth": "zef:FRITH",
+  "authors": [
     "Fernando Santagata"
   ],
-  "build-depends" : [ ],
-  "depends" : [ ],
-  "description" : "An interface to libgsl, the Gnu Scientific Library - elementary functions.",
-  "license" : "Artistic-2.0",
-  "name" : "Math::Libgsl::Elementary",
-  "perl" : "6.c",
-  "provides" : {
-    "Math::Libgsl::Elementary" : "lib/Math/Libgsl/Elementary.rakumod",
-    "Math::Libgsl::Raw::Elementary" : "lib/Math/Libgsl/Raw/Elementary.rakumod"
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "An interface to libgsl, the Gnu Scientific Library - elementary functions.",
+  "license": "Artistic-2.0",
+  "name": "Math::Libgsl::Elementary",
+  "perl": "6.c",
+  "provides": {
+    "Math::Libgsl::Elementary": "lib/Math/Libgsl/Elementary.rakumod",
+    "Math::Libgsl::Raw::Elementary": "lib/Math/Libgsl/Raw/Elementary.rakumod"
   },
-  "resources" : [ ],
-  "source-url" : "git://github.com/frithnanth/raku-Math-Libgsl-Elementary.git",
-  "tags" : [
+  "resources": [
+  ],
+  "source-url": "git://github.com/frithnanth/raku-Math-Libgsl-Elementary.git",
+  "tags": [
     "math",
     "nativecall"
   ],
-  "test-depends" : [ ],
-  "version" : "0.0.3"
+  "test-depends": [
+  ],
+  "version": "0.0.3"
 }

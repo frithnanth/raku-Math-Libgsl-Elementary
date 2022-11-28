@@ -1,6 +1,6 @@
 use v6;
 
-unit module Math::Libgsl::Elementary:ver<0.0.3>:auth<cpan:FRITH>;
+unit module Math::Libgsl::Elementary:ver<0.0.3>:auth<zef:FRITH>;
 
 use Math::Libgsl::Raw::Elementary :ALL;
 
@@ -31,7 +31,7 @@ Math::Libgsl::Elementary - An interface to libgsl, the Gnu Scientific Library - 
 
 =head1 SYNOPSIS
 
-=begin code :lang<perl6>
+=begin code :lang<raku>
 
 use Math::Libgsl::Elementary :ALL;
 
